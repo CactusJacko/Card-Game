@@ -1,16 +1,18 @@
 #pragma once
 #include <string>
+using namespace std;
+
 
 class Card
 {
-public:
+private:
 	string Cardletter;
 
 
 
 
-private:
-
+public:
+	Card(int CardList, string Suit);
 
 
 };

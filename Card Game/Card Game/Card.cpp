@@ -1,3 +1,6 @@
 #include "Card.h"
+#include <string>
 
-//needs sorting system
+Card::Card(int CardList, string Suit) {
+
+}
