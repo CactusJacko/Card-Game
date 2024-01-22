@@ -18,6 +18,10 @@ public:
 
 	int SeeTopCard();
 
+	int LossOfTopCard();
+
+	int TempCard();
+
 	
 };
 

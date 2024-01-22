@@ -16,8 +16,16 @@ Deck::Deck(int DeckShuffler) {
 	
 }
 
+//Looks at the top card 
 int Deck::SeeTopCard() {
 	return CardLayout.front();
+}
+
+//Removes the top card from the pile
+int Deck::LossOfTopCard() {
+	int TempCard = CardLayout.front();
+	CardLayout.pop();
+	return TempCard;
 }
 
 //needs sorting system

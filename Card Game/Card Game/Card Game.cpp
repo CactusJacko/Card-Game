@@ -17,6 +17,13 @@ int main()
 	cout << GameDeck.SeeTopCard() << endl;
 	Steve.AddHand(GameDeck.SeeTopCard());
 
+	cout << GameDeck.LossOfTopCard() << endl;
+
+	cout << GameDeck.SeeTopCard() << endl;
+	Steve.AddHand(GameDeck.SeeTopCard());
+
+
+
 
 	//cout << "What is your name" << endl;
 	//string User;
