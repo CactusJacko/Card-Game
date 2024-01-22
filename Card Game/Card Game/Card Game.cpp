@@ -2,8 +2,24 @@
 //
 
 #include <iostream>
+#include <string>
+#include "Card.h"
+using namespace std;
+
 
 int main()
 {
-    std::cout << "Hello World!\n";
+//Menu
+//Choose one game or the other
+	
+//BlackJack
+	player.give(deck.takeOne());
+
+
+
+
+
+//Solatare
+
+
 }
