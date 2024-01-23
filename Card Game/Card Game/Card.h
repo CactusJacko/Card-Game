@@ -12,7 +12,7 @@ private:
 
 
 public:
-	Card(int CardList, string Suit);
+	Card(string suit, char face, int value, bool Is_Ace );
 
 
 };

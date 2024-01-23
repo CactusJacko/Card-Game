@@ -4,6 +4,7 @@
 #include <queue>
 
 Deck::Deck(int DeckShuffler) {
+	//Change to a random card generator 
 	CardLayout.push(4);
 	CardLayout.push(7);
 	CardLayout.push(8);

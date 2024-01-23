@@ -1,6 +1,6 @@
 #include "Card.h"
 #include <string>
 
-Card::Card(int CardList, string Suit) {
+Card::Card(string suit, char face, int value, bool Is_Ace); {
 
 }

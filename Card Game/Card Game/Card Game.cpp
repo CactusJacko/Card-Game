@@ -11,25 +11,19 @@ using namespace std;
 
 int main()
 {
-	Player Steve = Player("Steve", 5);
+	Player Main = Player("Steve", 5);
 	Deck GameDeck = Deck(0);
 
 	//cout << GameDeck.SeeTopCard() << endl;
-	Steve.AddHand(GameDeck.SeeTopCard());
+	Main.AddHand(GameDeck.SeeTopCard());
 
 	cout << GameDeck.LossOfTopCard() << endl;
 
 	//cout << GameDeck.SeeTopCard() << endl;
-	Steve.AddHand(GameDeck.SeeTopCard());
+	Main.AddHand(GameDeck.SeeTopCard());
 
 	cout << GameDeck.LossOfTopCard() << endl;
 
-
-
-	//cout << "What is your name" << endl;
-	//string User;
-
-	//cout << User << endl;
 
 	//Menu
 //Choose one game or the other
