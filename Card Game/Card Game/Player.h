@@ -15,6 +15,8 @@ public:
 	Player(string name, int inventory);
 
 	void AddHand(int NewCard);
+	
+	void Total();
 
 	
 };

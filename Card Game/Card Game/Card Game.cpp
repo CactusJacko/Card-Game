@@ -14,14 +14,15 @@ int main()
 	Player Steve = Player("Steve", 5);
 	Deck GameDeck = Deck(0);
 
-	cout << GameDeck.SeeTopCard() << endl;
+	//cout << GameDeck.SeeTopCard() << endl;
 	Steve.AddHand(GameDeck.SeeTopCard());
 
 	cout << GameDeck.LossOfTopCard() << endl;
 
-	cout << GameDeck.SeeTopCard() << endl;
+	//cout << GameDeck.SeeTopCard() << endl;
 	Steve.AddHand(GameDeck.SeeTopCard());
 
+	cout << GameDeck.LossOfTopCard() << endl;
 
 
 
