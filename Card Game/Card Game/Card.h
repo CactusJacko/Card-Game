@@ -12,11 +12,10 @@ private:
 
 
 public:
-	Card(string suit, char face, int value, bool Is_Ace );
+	Card(string suit, string value, bool Is_Special );
 	//52 cards in total to play with.
-	//I could designate each card with a char, which would quivilate to 26 chars.
-	//I could do two chars which would equal 52 cards.
-	//For example A,A or Z,Z
+	// Each card needs its own number to be assigned to.
+	// For example number 1 = 2 of spades.
 
 
 };

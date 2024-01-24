@@ -1,5 +1,4 @@
-// Card Game.cpp : This file contains the 'main' function. Program execution begins and ends there.
-//
+//MAIN FILE
 
 #include <iostream>
 #include <string>
@@ -13,7 +12,7 @@ int main()
 {
 	Player Main = Player("Steve", 5);
 	Deck GameDeck = Deck(0);
-	Card Cards = Card();
+	Card Cards = Card("Hearts", "Two", false);
 
 	//cout << GameDeck.SeeTopCard() << endl;
 	Main.AddHand(GameDeck.SeeTopCard());
@@ -24,6 +23,8 @@ int main()
 	Main.AddHand(GameDeck.SeeTopCard());
 
 	cout << GameDeck.LossOfTopCard() << endl;
+
+	cout << GameDeck.makeDeck() << endl;
 
 
 	//Menu

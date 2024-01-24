@@ -1,6 +1,12 @@
 #include "Card.h"
 #include <string>
 
-Card::Card(string suit, char face, int value, bool Is_Ace) {
+//Card class is for singular instances of cards and not mutiple cards
+
+Card::Card(string suit, string value, bool Is_Special) {
+
+
+
+
 
 }

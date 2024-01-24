@@ -1,5 +1,6 @@
 #pragma once
 #include <queue>
+#include <vector>
 using namespace std;
 
 
@@ -7,7 +8,8 @@ class Deck
 {
 private:
 
-
+	// stores the deck of cards
+	vector <Card> cardsDeck;
 
 
 	queue <int> CardLayout;
@@ -21,6 +23,9 @@ public:
 	int LossOfTopCard();
 
 	int TempCard();
+
+	void makeDeck();
+
 
 	
 };
