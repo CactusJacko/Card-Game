@@ -13,6 +13,7 @@ int main()
 {
 	Player Main = Player("Steve", 5);
 	Deck GameDeck = Deck(0);
+	Card Cards = Card();
 
 	//cout << GameDeck.SeeTopCard() << endl;
 	Main.AddHand(GameDeck.SeeTopCard());
