@@ -24,7 +24,9 @@ int main()
 
 	cout << GameDeck.LossOfTopCard() << endl;
 
-	cout << GameDeck.makeDeck() << endl;
+	//for (Card card : GameDeck.makeDeck()) {
+	//	cout << card.suit + card.value << endl;
+	//}
 
 
 	//Menu

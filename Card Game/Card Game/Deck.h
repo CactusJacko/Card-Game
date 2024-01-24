@@ -1,6 +1,7 @@
 #pragma once
 #include <queue>
 #include <vector>
+#include "Card.h"
 using namespace std;
 
 

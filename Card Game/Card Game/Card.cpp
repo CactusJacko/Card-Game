@@ -5,7 +5,9 @@
 
 Card::Card(string suit, string value, bool Is_Special) {
 
-
+	this->suit = suit;
+	this->value = value;
+	this->Is_Special = Is_Special;
 
 
 
