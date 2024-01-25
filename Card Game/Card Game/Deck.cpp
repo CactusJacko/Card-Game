@@ -1,9 +1,16 @@
 #include "Deck.h"
 #include "Card.h" 
 #include <stack>
-#include <String>
-#include <queue>
+#include <algorithm>
+#include <iostream>
+#include <random>
+#include <iterator>
+//#include <String>
+//#include <queue>
 #include <vector>
+using namespace std;
+
+//#include <cstdlib>
 
 
 
@@ -38,6 +45,22 @@ Deck::Deck(int DeckShuffler) {
 //}
 
 
+
+void Deck::RandomNumberGen() {
+    random_device rd;
+    mt19937 g(rd());
+
+    shuffle(cardsDeck.begin(), cardsDeck.end(), g);
+    copy(cardsDeck.begin(), cardsDeck.end(), ostream_iterator<string>(cout, ""));
+
+}
+
+
+//Picks a random card from the deck
+//int Deck::DeckReader() {
+    //return DeckShuffler;
+    //return CardLayout[5];
+//}
 
 
 void Deck::makeDeck() {

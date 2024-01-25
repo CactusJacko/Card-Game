@@ -13,7 +13,7 @@ private:
 	vector <Card> cardsDeck;
 
 
-	queue <int> CardLayout;
+	//queue <int> CardLayout;
 
 public:
 
@@ -27,6 +27,9 @@ public:
 
 	void makeDeck();
 
+	//int DeckReader();
+
+	void RandomNumberGen();
 
 	
 };

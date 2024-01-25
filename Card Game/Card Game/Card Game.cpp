@@ -5,6 +5,7 @@
 #include "Card.h"
 #include "Deck.h"
 #include "Player.h"
+#include <cstdlib>
 using namespace std;
 
 
@@ -28,7 +29,7 @@ int main()
 	//	cout << card.suit + card.value << endl;
 	//}
 
-
+	cout << "cheese" << endl;
 	//Menu
 //Choose one game or the other
 	
