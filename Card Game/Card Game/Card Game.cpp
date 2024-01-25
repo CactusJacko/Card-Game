@@ -15,14 +15,14 @@ int main()
 	Card Cards = Card("Hearts", "Two", false);
 
 	//cout << GameDeck.SeeTopCard() << endl;
-	Main.AddHand(GameDeck.SeeTopCard());
+	//Main.AddHand(GameDeck.SeeTopCard());
 
-	cout << GameDeck.LossOfTopCard() << endl;
+	//cout << GameDeck.LossOfTopCard() << endl;
 
 	//cout << GameDeck.SeeTopCard() << endl;
-	Main.AddHand(GameDeck.SeeTopCard());
+	//Main.AddHand(GameDeck.SeeTopCard());
 
-	cout << GameDeck.LossOfTopCard() << endl;
+	//cout << GameDeck.LossOfTopCard() << endl;
 
 	//for (Card card : GameDeck.makeDeck()) {
 	//	cout << card.suit + card.value << endl;
