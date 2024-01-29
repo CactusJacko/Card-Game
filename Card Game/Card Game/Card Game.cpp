@@ -29,8 +29,12 @@ int main()
 	//	cout << card.suit + card.value << endl;
 	//}
 
-	cout << "cheese" << endl;
+	GameDeck.makeDeck();
+	GameDeck.RandomNumberGen();
+
+
 	//Menu
+
 //Choose one game or the other
 	
 //BlackJack

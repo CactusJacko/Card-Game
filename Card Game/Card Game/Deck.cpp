@@ -45,13 +45,14 @@ Deck::Deck(int DeckShuffler) {
 //}
 
 
-
+// Shuffles the cards randomly
 void Deck::RandomNumberGen() {
     random_device rd;
     mt19937 g(rd());
 
     shuffle(cardsDeck.begin(), cardsDeck.end(), g);
-    copy(cardsDeck.begin(), cardsDeck.end(), ostream_iterator<string>(cout, ""));
+   // copy(cardsDeck.begin(), cardsDeck.end(), ostream_iterator<string>(cout, ""));
+    cout << cardsDeck[0].suit << " OF " << cardsDeck[0].value << endl;
 
 }
 
