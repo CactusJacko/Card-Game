@@ -7,14 +7,16 @@ using namespace std;
 class Player
 {
 private:
-	vector <int> hand;
+	//vector <int> hand;
+
+	
 	
 
 	
 public:
-	Player(string name, int inventory);
+	Player(string name, int inventory, bool IsBust);
 
-	void AddHand(int NewCard);
+	//void AddHand(int NewCard);
 	
 	void Total();
 

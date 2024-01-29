@@ -1,14 +1,34 @@
 #include "Card.h"
 #include <string>
+#include <iostream>
+using namespace std;
 
 //Card class is for singular instances of cards and not mutiple cards
 
-Card::Card(string suit, string value, bool Is_Special) {
+Card::Card(string rank, string suit) {
 
 	this->suit = suit;
-	this->value = value;
-	this->Is_Special = Is_Special;
+	this->rank = rank;
 
 
+	if (rank == "ACE") {
+		value = 11;
+	}
 
+	else if (rank == "KING") {
+		value = 10;
+	}
+
+	else if (rank == "QUEEN") {
+		value = 10;
+	}
+
+	else if (rank == "JACK") {
+		value = 10;
+	}
+
+	else {
+		//coverts string to interger.
+		value = stoi(rank);
+	}
 }
