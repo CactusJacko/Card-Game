@@ -11,7 +11,7 @@ using namespace std;
 
 int main()
 {
-	Player Main = Player("Steve", 5);
+	Player player1 = Player("Steve", 5,true);
 	Deck GameDeck = Deck(0);
 	//Card Cards = Card("Two", "Hearts");
 
@@ -31,6 +31,11 @@ int main()
 
 	GameDeck.makeDeck();
 	GameDeck.RandomNumberGen();
+
+
+	Card tempCard = GameDeck.takeTopCard();
+
+	player1.AddCard(tempCard);
 
 
 	//Menu

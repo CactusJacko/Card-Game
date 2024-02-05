@@ -19,7 +19,7 @@ public:
 
 	Deck(int DeckShuffler);
 
-	int SeeTopCard();
+	Card takeTopCard();
 
 	int LossOfTopCard();
 

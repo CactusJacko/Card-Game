@@ -25,10 +25,48 @@ void Deck::RandomNumberGen() {
 
     shuffle(cardsDeck.begin(), cardsDeck.end(), g);
    // copy(cardsDeck.begin(), cardsDeck.end(), ostream_iterator<string>(cout, ""));
-    cout << cardsDeck[0].rank << " OF " << cardsDeck[0].suit << " value = " << cardsDeck[0].value << endl;
-    cout << cardsDeck[1].rank << " OF " << cardsDeck[1].suit << " value = " << cardsDeck[1].value << endl;
 
+    //creates a player hand vector what stores the players hand
+    vector<Card> playerHand;
+
+    //Takes card from Card deck and puts it into a player hand vector
+    playerHand.push_back(cardsDeck.back());
+    //removes card from card deck
+    cardsDeck.pop_back();
+
+    
+    int handTotal = 0;
+    // creates a loop and loop
+    for (Card c : playerHand) {
+        handTotal += c.value;
+    }
 }
+
+//cout << cardsDeck[0].rank << " OF " << cardsDeck[0].suit << " value = " << cardsDeck[0].value << endl;
+//cout << cardsDeck[1].rank << " OF " << cardsDeck[1].suit << " value = " << cardsDeck[1].value << endl;
+//int Total = cardsDeck[0].value + cardsDeck[1].value;
+//cout << Total << endl;
+//if (Total >= 21) {
+   // cout << "Bust" << endl;
+//}
+
+//else {
+   // cout << "Would you like to hit?" << endl;
+   // string hit;
+   // cin >> hit;
+   // if (hit == "hit") {
+   //     cout << cardsDeck[2].rank << " OF " << cardsDeck[2].suit << " value = " << cardsDeck[2].value << endl;
+   //     int NewTotal = Total + cardsDeck[2].value;
+   //     cout << NewTotal << endl;
+  //  }
+
+   // else {
+    //    cout << "Your total is " << Total << endl;
+   // }
+//}
+
+//}
+
 
 
 // Contains all 52 cards, stores them in a vector

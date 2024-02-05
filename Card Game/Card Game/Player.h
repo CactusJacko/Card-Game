@@ -1,4 +1,6 @@
 #pragma once
+#include "Card.h"
+#include "Deck.h"
 #include <string>
 #include <vector>
 using namespace std;
@@ -16,9 +18,9 @@ private:
 public:
 	Player(string name, int inventory, bool IsBust);
 
-	//void AddHand(int NewCard);
+	void AddCard();
 	
-	void Total();
+	//void Total();
 
 	
 };
