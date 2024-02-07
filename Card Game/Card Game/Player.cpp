@@ -15,9 +15,26 @@ using namespace std;
 
 
 Player::Player(string name, int inventory, bool IsBust) {
+    handtotal = 0;
 }
-void AddCard() {
 
-	}
+//Adds last card from the deck and adds it to the player hand, takes deck as paramater
+void Player::AddCard(Deck & inDeck) {
+   
+
+    //Takes card from Card deck and puts it into a player hand vector
+    playerHand.push_back(inDeck.Getdeck().back());
+
+    //removes card from card deck
+    inDeck.popdeck();
+
+
+    handtotal = 0;
+    // creates a loop and loop
+    for (Card c : playerHand) {
+        handtotal += c.value;
+    }
 
 }
+
+

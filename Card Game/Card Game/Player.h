@@ -18,10 +18,13 @@ private:
 public:
 	Player(string name, int inventory, bool IsBust);
 
-	void AddCard();
+	void AddCard(Deck & inDeck);
 	
 	//void Total();
 
-	
+	int handtotal;
+	//player hand
+	vector<Card> playerHand;
+
 };
 

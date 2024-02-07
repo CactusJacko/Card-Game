@@ -13,6 +13,8 @@ int main()
 {
 	Player player1 = Player("Steve", 5,true);
 	Deck GameDeck = Deck(0);
+	Card Cards = Card("ACE", "HEARTS");
+
 	//Card Cards = Card("Two", "Hearts");
 
 	//cout << GameDeck.SeeTopCard() << endl;
@@ -33,9 +35,28 @@ int main()
 	GameDeck.RandomNumberGen();
 
 
-	Card tempCard = GameDeck.takeTopCard();
 
-	player1.AddCard(tempCard);
+	for (Card card : GameDeck.Getdeck()) {
+		cout << card.suit << endl;
+	}
+	cout << "\n \n \n \n" << endl;
+
+	player1.AddCard(GameDeck);
+
+	for (Card card : player1.playerHand) {
+		cout << card.suit << endl;
+	}
+
+	cout << "\n \n \n \n" << endl;
+
+	for (Card card : GameDeck.Getdeck()) {
+		cout << card.suit << endl;
+	}
+
+	cout << "\n \n \n \n" << endl;
+
+	cout << player1.playerHand.back().suit << endl;
+	cout << player1.playerHand.back().rank << endl;
 
 
 	//Menu

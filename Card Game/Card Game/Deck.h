@@ -17,6 +17,12 @@ private:
 
 public:
 
+	//Gets the deck from a private so you can access it
+	vector<Card> Getdeck();
+
+	//Pops the last card in the cards deck
+	void popdeck();
+
 	Deck(int DeckShuffler);
 
 	Card takeTopCard();
@@ -29,8 +35,8 @@ public:
 
 	//int DeckReader();
 
+	//Puts the cards into a random order
 	void RandomNumberGen();
 
-	
 };
 

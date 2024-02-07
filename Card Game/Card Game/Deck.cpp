@@ -25,22 +25,17 @@ void Deck::RandomNumberGen() {
 
     shuffle(cardsDeck.begin(), cardsDeck.end(), g);
    // copy(cardsDeck.begin(), cardsDeck.end(), ostream_iterator<string>(cout, ""));
-
-    //creates a player hand vector what stores the players hand
-    vector<Card> playerHand;
-
-    //Takes card from Card deck and puts it into a player hand vector
-    playerHand.push_back(cardsDeck.back());
-    //removes card from card deck
-    cardsDeck.pop_back();
-
-    
-    int handTotal = 0;
-    // creates a loop and loop
-    for (Card c : playerHand) {
-        handTotal += c.value;
-    }
 }
+
+
+void Deck::popdeck() {
+    cardsDeck.pop_back();
+}
+
+vector<Card> Deck::Getdeck(){
+    return this->cardsDeck;
+}
+
 
 //cout << cardsDeck[0].rank << " OF " << cardsDeck[0].suit << " value = " << cardsDeck[0].value << endl;
 //cout << cardsDeck[1].rank << " OF " << cardsDeck[1].suit << " value = " << cardsDeck[1].value << endl;
