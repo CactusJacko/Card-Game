@@ -12,7 +12,7 @@ using namespace std;
 
 int main()
 {
-	Player Player2 = Player("Steve", 5, true);
+	Player player2 = Player("Steve", 5, true);
 	Player player1 = Player("Steve", 5 , true);
 	Deck GameDeck = Deck(0);
 	Card Cards = Card("ACE" , "HEARTS");
@@ -45,6 +45,7 @@ int main()
 	}
 	cout << "\n \n \n \n" << endl;
 
+	player2.AddCard(GameDeck);
 	player1.AddCard(GameDeck);
 	
 
@@ -66,6 +67,11 @@ int main()
 	cout << player1.playerHand.front().rank << " OF " << player1.playerHand.front().suit << endl;
 	cout << player1.playerHand.front().value << endl;
 	cout << player1.handtotal << endl;
+
+
+	cout << "\n \n \n \n" << endl;
+
+	cout << player2.playerHand.back().rank << " OF " << player2.playerHand.back().suit << endl;
 
 	
 
