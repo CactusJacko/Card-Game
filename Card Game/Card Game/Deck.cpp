@@ -37,33 +37,6 @@ vector<Card> Deck::Getdeck(){
 }
 
 
-//cout << cardsDeck[0].rank << " OF " << cardsDeck[0].suit << " value = " << cardsDeck[0].value << endl;
-//cout << cardsDeck[1].rank << " OF " << cardsDeck[1].suit << " value = " << cardsDeck[1].value << endl;
-//int Total = cardsDeck[0].value + cardsDeck[1].value;
-//cout << Total << endl;
-//if (Total >= 21) {
-   // cout << "Bust" << endl;
-//}
-
-//else {
-   // cout << "Would you like to hit?" << endl;
-   // string hit;
-   // cin >> hit;
-   // if (hit == "hit") {
-   //     cout << cardsDeck[2].rank << " OF " << cardsDeck[2].suit << " value = " << cardsDeck[2].value << endl;
-   //     int NewTotal = Total + cardsDeck[2].value;
-   //     cout << NewTotal << endl;
-  //  }
-
-   // else {
-    //    cout << "Your total is " << Total << endl;
-   // }
-//}
-
-//}
-
-
-
 // Contains all 52 cards, stores them in a vector
 void Deck::makeDeck() {
     for (int i = 1; i <= 13; i++) {
