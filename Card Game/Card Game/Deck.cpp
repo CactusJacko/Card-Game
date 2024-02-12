@@ -27,11 +27,12 @@ void Deck::RandomNumberGen() {
    // copy(cardsDeck.begin(), cardsDeck.end(), ostream_iterator<string>(cout, ""));
 }
 
-
+//Removes the last card out of the vector 
 void Deck::popdeck() {
     cardsDeck.pop_back();
 }
 
+//This returns the vector from private and makes it public
 vector<Card> Deck::Getdeck(){
     return this->cardsDeck;
 }

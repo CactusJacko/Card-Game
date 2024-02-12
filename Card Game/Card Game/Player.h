@@ -19,12 +19,15 @@ public:
 	Player(string name, int inventory, bool IsBust);
 
 	void AddCard(Deck & inDeck);
-	
+	//void printdeck();
+
 	//void Total();
 
 	int handtotal;
 	//player hand
 	vector<Card> playerHand;
+
+	
 
 };
 

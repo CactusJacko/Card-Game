@@ -27,10 +27,6 @@ void Player::AddCard(Deck & inDeck) {
    
     //removes card from card deck
     inDeck.popdeck();
-    
-
-    playerHand.push_back(inDeck.Getdeck().back());
-    inDeck.popdeck();
 
     handtotal = 0;
     // creates a loop and loop
@@ -39,5 +35,9 @@ void Player::AddCard(Deck & inDeck) {
     }
 
 }
+
+//void Player::printdeck() {
+   // cout <<  << endl;
+//}
 
 
