@@ -17,6 +17,7 @@ int main()
 	Deck GameDeck = Deck(0);
 	Card Cards = Card("ACE" , "HEARTS");
 
+	//Only draws the deck once. (Can put in the loop if wants to be more than once)
 	//Makes the deck
 	GameDeck.makeDeck();
 	//Shuffes the deck randomly
