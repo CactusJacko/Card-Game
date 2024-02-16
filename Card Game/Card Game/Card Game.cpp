@@ -47,6 +47,8 @@ int main()
 		cout << "card total " << player1.handtotal << endl;
 
 		cout << "\n" << endl;
+		player1.printdeck();
+		cout << "\n" << endl;
 
 		cout << "Player 2 first card" << endl;
 		cout << player2.playerHand.back().rank << " OF " << player2.playerHand.back().suit << endl;
@@ -69,6 +71,9 @@ int main()
 			cout << player1.playerHand.back().rank << " OF " << player1.playerHand.back().suit << endl;
 			cout << "card total " << player1.handtotal << endl;
 			cout << "amounts of cards " << player1.playerHand.size() << endl;
+
+			cout << "\n" << endl;
+			player1.printdeck();
 
 			if (player1.handtotal >= 22) {
 				cout << "YOU ARE BUST" << endl;
