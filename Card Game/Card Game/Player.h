@@ -19,7 +19,7 @@ public:
 	Player(string name, int inventory, bool IsBust);
 
 	void AddCard(Deck & inDeck);
-	//void printdeck();
+	void printdeck();
 
 	//void Total();
 

@@ -38,25 +38,14 @@ int main()
 		player1.AddCard(GameDeck);
 
 		//Prints all the players cards
-		cout << "Player 1 first card" << endl;
-		cout << player1.playerHand.back().rank << " OF " << player1.playerHand.back().suit << endl;
-		cout << player1.playerHand.back().value << endl;
-
-		cout << "Player 1 second card" << endl;
-		cout << player1.playerHand.front().rank << " OF " << player1.playerHand.front().suit << endl;
-		cout << player1.playerHand.front().value << endl;
-		cout << "card total " << player1.handtotal << endl;
+		cout << "Player 1 cards" << endl;
+		player1.printdeck();
 
 		cout << "\n" << endl;
 
-		cout << "Player 2 first card" << endl;
-		cout << player2.playerHand.back().rank << " OF " << player2.playerHand.back().suit << endl;
-		cout << player2.playerHand.back().value << endl;
-
-		cout << "Player 2 second card" << endl;
-		cout << player2.playerHand.front().rank << " OF " << player1.playerHand.front().suit << endl;
-		cout << player2.playerHand.front().value << endl;
-		cout << "card total " << player2.handtotal << endl;
+		cout << "Player 2 cards" << endl;
+		player2.printdeck();
+		
 		
 		cout << "\n" << endl;
 
@@ -70,6 +59,9 @@ int main()
 			cout << player1.playerHand.back().rank << " OF " << player1.playerHand.back().suit << endl;
 			cout << "card total " << player1.handtotal << endl;
 			cout << "amounts of cards " << player1.playerHand.size() << endl;
+
+			cout << "\n" << endl;
+			player1.printdeck();
 
 			if (player1.handtotal >= 22) {
 				cout << "YOU ARE BUST" << endl;

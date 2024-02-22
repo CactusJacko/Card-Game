@@ -36,8 +36,11 @@ void Player::AddCard(Deck & inDeck) {
 
 }
 
-//void Player::printdeck() {
-   // cout <<  << endl;
-//}
+void Player::printdeck() {
+    for (int N = 0; N < playerHand.size(); N++) {
+        cout << playerHand[N].rank << " OF " << playerHand[N].suit << endl;
+    }
+   
+}
 
 
