@@ -20,6 +20,8 @@ public:
 
 	void AddCard(Deck & inDeck);
 	void printdeck();
+	void DealerHit(Deck& inDeck);
+	void HasACE();
 
 	//void Total();
 
