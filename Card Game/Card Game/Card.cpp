@@ -1,4 +1,5 @@
 #include "Card.h"
+#include "Player.h"
 #include <string>
 #include <iostream>
 using namespace std;
@@ -12,6 +13,13 @@ Card::Card(string rank, string suit) {
 
 
 	if (rank == "ACE") {
+		//if (Player::handtotal <= 10) {
+			//value = 11;
+		//}
+
+		//else {
+		//	value = 1;
+		//}
 		value = 11;
 	}
 

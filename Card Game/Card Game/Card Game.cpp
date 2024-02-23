@@ -28,6 +28,11 @@ int main()
 	bool A = true;
 	while (A == true) {
 
+		cout << "\n" << endl;
+		cout << "NEW GAME" << endl;
+		cout << "\n" << endl;
+
+
 		player1.playerHand.clear();
 		player2.playerHand.clear();
 		
@@ -40,14 +45,24 @@ int main()
 		//Prints all the players cards
 		cout << "Player 1 cards" << endl;
 		player1.printdeck();
+		cout << player1.handtotal << endl;
 
 		cout << "\n" << endl;
 
 		cout << "Player 2 cards" << endl;
 		player2.printdeck();
+		cout << player2.handtotal << endl;
 		
 		
 		cout << "\n" << endl;
+
+		player2.DealerHit(GameDeck);
+		cout << "player 2 deck" << endl;
+		player2.printdeck();
+		cout << "player 2 TOTAL --" << player2.handtotal << endl;
+		cout << "P2 amounts of cards " << player2.playerHand.size() << endl;
+		cout << "\n" << endl;
+
 
 
 		cout << "HIT? Y/N" << endl;
@@ -60,8 +75,17 @@ int main()
 			cout << "card total " << player1.handtotal << endl;
 			cout << "amounts of cards " << player1.playerHand.size() << endl;
 
+			
+			
+
 			cout << "\n" << endl;
-			player1.printdeck();
+
+
+
+
+
+
+
 
 			if (player1.handtotal >= 22) {
 				cout << "YOU ARE BUST" << endl;
@@ -125,6 +149,20 @@ int main()
 						cout << "card total for  the dealer - " << player2.handtotal << endl;
 						cout << "\n" << endl;
 						cout << "You lose" << endl;
+
+
+						//Ask the user if they want to play again
+						cout << "Want to play again Y/N" << endl;
+						string PlayAgain;
+						cin >> PlayAgain;
+
+						if (PlayAgain == "Y") {
+							A = true;
+						}
+
+						else {
+							A = false;
+						}
 
 					}
 
