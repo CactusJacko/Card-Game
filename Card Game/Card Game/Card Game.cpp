@@ -44,10 +44,13 @@ int main()
 		cout << "PLAYER:" << endl;
 		player1.printdeck();
 		
+
 		cout << "\n" << endl;
 
 		cout << "DEALER:" << endl;
 		player2.printdeck();
+		
+		
 		
 		cout << "\n" << endl;
 
@@ -79,6 +82,7 @@ int main()
 		}
 
 
+
 		//Player begins to hit
 		else {
 			//First chance to hit
@@ -94,15 +98,17 @@ int main()
 				cout << "PLAYER TAKES A NEW CARD" << endl;
 				cout << "PLAYERS NEW DECK:" << endl;
 				player1.printdeck();
+
 				cout << "\n" << endl;
 
-				//Bust outcome
+
 				if (player1.handtotal >= 22) {
 					cout << "YOU LOSE" << endl;
 					cout << "PLAYER CARD TOTAL - " << player1.handtotal << endl;
 					cout << "YOU ARE BUST" << endl;
 					cout << "\n" << endl;
-	
+
+					//Ask the user if they want to play again
 					cout << "Want to play again Y/N" << endl;
 					string PlayAgain;
 					cin >> PlayAgain;
@@ -132,8 +138,7 @@ int main()
 						cout << "PLAYER TAKES A NEW CARD" << endl;
 						cout << "PLAYERS NEW DECK:" << endl;
 						player1.printdeck();
-						cout << "\n" << endl;
-						
+
 						if (player1.handtotal >= 22) {
 							cout << "YOU LOSE" << endl;
 							cout << "PLAYER CARD TOTAL - " << player1.handtotal << endl;
