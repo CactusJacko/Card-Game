@@ -73,16 +73,21 @@ void Player::printdeck() {
 
 void Player::DealerHit(Deck& inDeck) {
     if (handtotal < 17) {
+        cout << "DEALER TAKES A NEW CARD" << endl;
+        cout << "DEALERS NEW DECK:" << endl;
         //Takes card from Card deck and puts it into a player hand vector
         playerHand.push_back(inDeck.Getdeck().back());
 
         //removes card from card deck
         inDeck.popdeck();
 
+
         handtotal = 0;
         for (Card c : playerHand) {
             handtotal += c.value;
         }
+
+        
     }
 }
 

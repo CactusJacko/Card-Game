@@ -17,7 +17,7 @@ int main()
 	Deck GameDeck = Deck(0);
 	Card Cards = Card("ACE" , "HEARTS");
 
-	//Only draws the deck once. (Can put in the loop if wants to be more than once)
+	
 	//Makes the deck
 	GameDeck.makeDeck();
 	//Shuffes the deck randomly
@@ -32,238 +32,233 @@ int main()
 		cout << "NEW GAME" << endl;
 		cout << "\n" << endl;
 
-
+		//Removes the previous cards from the game, adds new cards to the players
 		player1.playerHand.clear();
 		player2.playerHand.clear();
-		
-
 		player2.AddCard(GameDeck);
 		player2.AddCard(GameDeck);
 		player1.AddCard(GameDeck);
 		player1.AddCard(GameDeck);
 
 		//Prints all the players cards
-		cout << "Player 1 cards" << endl;
+		cout << "PLAYER:" << endl;
 		player1.printdeck();
-		cout << player1.handtotal << endl;
-
+		
 		cout << "\n" << endl;
 
-		cout << "Player 2 cards" << endl;
+		cout << "DEALER:" << endl;
 		player2.printdeck();
-		cout << player2.handtotal << endl;
-		
 		
 		cout << "\n" << endl;
 
+		//DEALER HAS THE CHANCE TO HIT AGAIN
 		player2.DealerHit(GameDeck);
-		cout << "player 2 deck" << endl;
-		player2.printdeck();
-		cout << "player 2 TOTAL --" << player2.handtotal << endl;
-		cout << "P2 amounts of cards " << player2.playerHand.size() << endl;
+		if (player2.playerHand.size() == 3) {
+			player2.printdeck();
+		}
+
 		cout << "\n" << endl;
 
-
-
-		cout << "HIT? Y/N" << endl;
-		string Hit;
-		cin >> Hit;
-
-		if (Hit == "Y") {
-			player1.AddCard(GameDeck);
-			cout << player1.playerHand.back().rank << " OF " << player1.playerHand.back().suit << endl;
-			cout << "card total " << player1.handtotal << endl;
-			cout << "amounts of cards " << player1.playerHand.size() << endl;
-
-			
-			
-
+		//Asses the dealers hand
+		if (player2.handtotal >= 22) {
+			cout << "YOU WIN" << endl;
+			cout << "DEALER BUST" << endl;
 			cout << "\n" << endl;
+			cout << "Want to play again Y/N" << endl;
+			string PlayAgain;
+			cin >> PlayAgain;
 
-
-
-
-
-
-
-
-			if (player1.handtotal >= 22) {
-				cout << "YOU ARE BUST" << endl;
-
-
-
-				//Ask the user if they want to play again
-				cout << "Want to play again Y/N" << endl;
-				string PlayAgain;
-				cin >> PlayAgain;
-
-				if (PlayAgain == "Y") {
-					A = true;
-					cout << "\n" << endl;
-				}
-
-				else {
-					A = false;
-				}
+			if (PlayAgain == "Y") {
+				A = true;
+				cout << "\n" << endl;
 			}
 
 			else {
-
-				cout << "HIT? Y/N" << endl;
-				string Hit;
-				cin >> Hit;
-
-				if (Hit == "Y") {
-					player1.AddCard(GameDeck);
-					cout << player1.playerHand.back().rank << " OF " << player1.playerHand.back().suit << endl;
-					cout << "card total " << player1.handtotal << endl;
-					cout << "amounts of cards " << player1.playerHand.size() << endl;
-
-					if (player1.handtotal >= 22) {
-						cout << "YOU ARE BUST" << endl;
+				A = false;
+			}
+		}
 
 
+		//Player begins to hit
+		else {
+			//First chance to hit
+			cout << "HIT? Y/N" << endl;
+			string Hit;
+			cin >> Hit;
 
-						//Ask the user if they want to play again
-						cout << "Want to play again Y/N" << endl;
-						string PlayAgain;
-						cin >> PlayAgain;
+			if (Hit == "Y") {
+				player1.AddCard(GameDeck);
+				cout << "PLAYER HIT" << endl;
+				cout << "\n" << endl;
 
-						if (PlayAgain == "Y") {
-							A = true;
-							cout << "\n" << endl;
-						}
+				cout << "PLAYER TAKES A NEW CARD" << endl;
+				cout << "PLAYERS NEW DECK:" << endl;
+				player1.printdeck();
+				cout << "\n" << endl;
 
-						else {
-							A = false;
-						}
+				//Bust outcome
+				if (player1.handtotal >= 22) {
+					cout << "YOU LOSE" << endl;
+					cout << "PLAYER CARD TOTAL - " << player1.handtotal << endl;
+					cout << "YOU ARE BUST" << endl;
+					cout << "\n" << endl;
+	
+					cout << "Want to play again Y/N" << endl;
+					string PlayAgain;
+					cin >> PlayAgain;
+
+					if (PlayAgain == "Y") {
+						A = true;
+						cout << "\n" << endl;
 					}
 
+					else {
+						A = false;
+					}
 				}
 
+
 				else {
+					// Second chance to hit
+					cout << "HIT? Y/N" << endl;
+					string Hit;
+					cin >> Hit;
 
-					cout << "You stayed the same" << endl;
-					if (player1.handtotal <= player2.handtotal) {
-						cout << "card total for you - " << player1.handtotal << endl;
-						cout << "card total for  the dealer - " << player2.handtotal << endl;
+					if (Hit == "Y") {
+						player1.AddCard(GameDeck);
+						cout << "PLAYER HIT" << endl;
 						cout << "\n" << endl;
-						cout << "You lose" << endl;
+						
+						cout << "PLAYER TAKES A NEW CARD" << endl;
+						cout << "PLAYERS NEW DECK:" << endl;
+						player1.printdeck();
+						cout << "\n" << endl;
+						
+						if (player1.handtotal >= 22) {
+							cout << "YOU LOSE" << endl;
+							cout << "PLAYER CARD TOTAL - " << player1.handtotal << endl;
+							cout << "YOU ARE BUST" << endl;
+							cout << "\n" << endl;
 
+							cout << "Want to play again Y/N" << endl;
+							string PlayAgain;
+							cin >> PlayAgain;
 
-						//Ask the user if they want to play again
-						cout << "Want to play again Y/N" << endl;
-						string PlayAgain;
-						cin >> PlayAgain;
+							if (PlayAgain == "Y") {
+								A = true;
+								cout << "\n" << endl;
+							}
 
-						if (PlayAgain == "Y") {
-							A = true;
-						}
-
-						else {
-							A = false;
+							else {
+								A = false;
+							}
 						}
 
 					}
 
 					else {
-						cout << "card total for you - " << player1.handtotal << endl;
-						cout << "card total for  the dealer - " << player2.handtotal << endl;
+
+						cout << "PLAYER STAYED" << endl;
 						cout << "\n" << endl;
-						cout << "You win" << endl;
+						if (player1.handtotal <= player2.handtotal) {
+							cout << "YOU LOSE" << endl;
+							cout << "DEALER HAS BEAT YOU" << endl;
+							cout << "PLAYER CARD TOTAL - " << player1.handtotal << endl;
+							cout << "DEALER CARD TOTAL - " << player2.handtotal << endl;
+							cout << "\n" << endl;
 
+							cout << "Want to play again Y/N" << endl;
+							string PlayAgain;
+							cin >> PlayAgain;
 
-						//Ask the user if they want to play again
-						cout << "Want to play again Y/N" << endl;
-						string PlayAgain;
-						cin >> PlayAgain;
+							if (PlayAgain == "Y") {
+								A = true;
+								cout << "\n" << endl;
+							}
 
-						if (PlayAgain == "Y") {
-							A = true;
+							else {
+								A = false;
+							}
 						}
 
 						else {
-							A = false;
+							cout << "YOU WIN" << endl;
+							cout << "PLAYER CARD TOTAL - " << player1.handtotal << endl;
+							cout << "DEALER CARD TOTAL - " << player2.handtotal << endl;
+							cout << "\n" << endl;
+
+							cout << "Want to play again Y/N" << endl;
+							string PlayAgain;
+							cin >> PlayAgain;
+
+							if (PlayAgain == "Y") {
+								A = true;
+								cout << "\n" << endl;
+							}
+
+							else {
+								A = false;
+							}
+
 						}
+
 
 					}
 
 
 				}
-
-
-			}
-		}
-
-		else {
-			cout << "You stayed the same" << endl;
-			if (player1.handtotal <= player2.handtotal) {
-				cout << "card total for you - " << player1.handtotal << endl;
-				cout << "card total for  the dealer - " << player2.handtotal << endl;
-				cout << "\n" << endl;
-				cout << "You lose" << endl;
-
-
-				//Ask the user if they want to play again
-				cout << "Want to play again Y/N" << endl;
-				string PlayAgain;
-				cin >> PlayAgain;
-
-				if (PlayAgain == "Y") {
-					A = true;
-				}
-
-				else {
-					A = false;
-				}
 			}
 
 			else {
-				cout << "card total for you - " << player1.handtotal << endl;
-				cout << "card total for  the dealer - " << player2.handtotal << endl;
+				cout << "PLAYER STAYED" << endl;
 				cout << "\n" << endl;
-				cout << "You win" << endl;
+				 if (player1.handtotal <= player2.handtotal) {
+					 cout << "YOU LOSE" << endl;
+					 cout << "DEALER HAS BEAT YOU" << endl;
+					 cout << "PLAYER CARD TOTAL - " << player1.handtotal << endl;
+					 cout << "DEALER CARD TOTAL - " << player2.handtotal << endl;
+					 cout << "\n" << endl;
 
-
-				//Ask the user if they want to play again
-				cout << "Want to play again Y/N" << endl;
-				string PlayAgain;
-				cin >> PlayAgain;
-
-				if (PlayAgain == "Y") {
-					A = true;
-				}
+					 cout << "Want to play again Y/N" << endl;
+					 string PlayAgain;
+					 cin >> PlayAgain;
+					 
+					 if (PlayAgain == "Y") {
+						 A = true;
+						 cout << "\n" << endl;
+					 }
+					 
+					 else {
+						 A = false;
+					 }
+				 }
 
 				else {
-					A = false;
+					 cout << "YOU WIN" << endl;
+					 cout << "PLAYER CARD TOTAL - " << player1.handtotal << endl;
+					 cout << "DEALER CARD TOTAL - " << player2.handtotal << endl;
+					 cout << "\n" << endl;
+
+					 cout << "Want to play again Y/N" << endl;
+					 string PlayAgain;
+					 cin >> PlayAgain;
+
+					 if (PlayAgain == "Y") {
+						 A = true;
+						 cout << "\n" << endl;
+					 }
+
+					 else {
+						 A = false;
+					 }
 				}
 			}
+
+
+
+
+
 		}
-
-
-
-
-
 	}
-
-
-
-
-		
-
-
-	//Menu
-
-//Choose one game or the other
-	
-//BlackJack
-	//player.give(deck.takeOne());
-
-
-
-
-
-//Solatare
-
 
 }
