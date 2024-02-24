@@ -33,14 +33,14 @@ void Player::AddCard(Deck & inDeck) {
 
    
     handtotal = 0;
-    // creates a loop and loop
+    // counts the other cards in the vector but avoids the ACES
     for (Card c : playerHand) {
         if (c.rank != "ACE") {
             handtotal += c.value;
         }
     }
 
-    //IF PLAYER HAS ACE
+    //Decides the ACE value from the hand total above
     for (int M = 0; M < playerHand.size(); M++) {
         if (playerHand[M].rank == "ACE") {
             if (handtotal + 11 < 21) {
@@ -54,6 +54,7 @@ void Player::AddCard(Deck & inDeck) {
 
     }
 
+    // counts the together now, includes ACES
     handtotal = 0;
     // creates a loop and loop
     for (Card c : playerHand) {
@@ -93,26 +94,6 @@ void Player::DealerHit(Deck& inDeck) {
 
 
 
-void Player::HasACE() {
-    
-   // tempCard = player.drawCard();
-   // if (tempCard.rank == "ACE") {
-      //  if(handTotal + 11 > 21) {
-       //     tempCard.setValue(1);
-      //  }
-       // else {
-      //      tempCard.setValue(11);
-      //  }
-   // }
-    
-    
-    
-    //for (int M = 0; M < playerHand.size(); M++) {
-   // if (playerHand[M].rank == "ACE" && handtotal == 21) {
-      // handtotal = 10;
-    //
-   // }
-}
 
 
 
