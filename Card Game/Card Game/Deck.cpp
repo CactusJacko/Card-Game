@@ -97,3 +97,13 @@ void Deck::makeDeck() {
   //  return cardsDeck;
 }
 
+
+//Exclusive to hit or miss 
+void Deck::iterator() {
+    //Uses the randomised deck and iterates throughout it.
+    //Once the deck reaches the same card 
+}
+
+void Deck::HitDeck() {
+    
+}

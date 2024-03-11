@@ -33,6 +33,10 @@ public:
 
 	void makeDeck();
 
+	//specifcally for HitOrMiss
+	void HitDeck();
+	void iterator();
+
 	//int DeckReader();
 
 	//Puts the cards into a random order
