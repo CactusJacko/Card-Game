@@ -21,6 +21,7 @@ public:
 	void AddCard(Deck & inDeck);
 	void printdeck();
 	void DealerHit(Deck& inDeck);
+	//void PlayerHIT(Deck& inDeck);
 	
 	
 

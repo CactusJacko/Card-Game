@@ -6,11 +6,23 @@
 #include "Player.h"
 #include "Dealer.h"
 #include <cstdlib>
+
 using namespace std;
 
+HitAndMiss::HitAndMiss() {};
 
 
 
+void HitAndMiss::HitAndMissRules() {
+
+	//Needs to explain the Hit and miss rules
+	//Gives player the option to play Hit and miss Afterwards or go to main menu
+
+}
+
+void HitAndMiss::HitAndMissGame() {
+
+}
 
 
 

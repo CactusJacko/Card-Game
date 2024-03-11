@@ -91,8 +91,38 @@ void Player::DealerHit(Deck& inDeck) {
         
     }
 }
+/*
+void Player::PlayerHIT(Deck& inDeck) {
+    AddCard(inDeck);
+    cout << "PLAYER HIT" << endl;
+    cout << "PLAYER TAKES A NEW CARD" << endl;
+    cout << "PLAYERS NEW DECK:" << endl;
+    printdeck();
 
+    if (handtotal >= 22) {
+        cout << "YOU LOSE" << endl;
+        cout << "PLAYER CARD TOTAL - " << handtotal << endl;
+        cout << "YOU ARE BUST" << endl;
+        cout << "\n" << endl;
 
+        //Ask the user if they want to play again
+        cout << "Want to play again Y/N" << endl;
+        string PlayAgain;
+        cin >> PlayAgain;
+
+        if (PlayAgain == "Y") {
+           // A = true;
+            cout << "\n" << endl;
+            return A = true;
+        }
+
+        else {
+            A = false;
+        }
+    }
+}
+
+*/
 
 
 

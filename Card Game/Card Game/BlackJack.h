@@ -1,6 +1,8 @@
 #pragma once
 #include <string>
 
+using namespace std;
+
 class BlackJack
 {
 
@@ -8,11 +10,9 @@ class BlackJack
 
 public:
 	
-	BlackJack(string name, int inventory) {
+	BlackJack();
 
-	}
-
-	void Game();
+	void BlackJackGame();
 
 	void BlackJackRules();
 };
