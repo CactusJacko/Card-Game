@@ -98,18 +98,48 @@ void Deck::makeDeck() {
 }
 
 
+//THINGS I NEED TO DO:
+// 1.NEEDS TO BE IN HIT OR MISS
+
+//2. NEEDS TO HAVE OWN THING TO GET RID OF CURRENT CARD
+
+
 //Exclusive to hit or miss 
-void Deck::iterator() {
+void Deck::iterator(Deck& inDeck) {
     //Uses the randomised deck and iterates throughout it.
     //Once the deck reaches the same card 
-
+/*
     for (int L = 0; L < HitHand.size(); L++) {
-       
+       if (card.getvalue()
 
     }
 
+  */
+
+
+    int verbalrank = 1;
+    bool Hit = false;
+    for (int L = 1; L < cardsDeck.size(); L++) {
+        if (verbalrank == cardsDeck[L].getValue()) {
+            Hit = true;
+            cout << cardsDeck[L].rank << "OF" << cardsDeck[L].value << endl;
+            HitHand.push_back(inDeck.Getdeck().back());
+            inDeck.popdeck();
+
+
+        }
+        verbalrank++;
+        if (verbalrank > 13) {
+            verbalrank = 1;
+        }
+    }
+   
 
 }
+
+
+
+
 
 
 

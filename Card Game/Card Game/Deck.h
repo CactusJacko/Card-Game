@@ -35,14 +35,14 @@ public:
 
 	//specifcally for HitOrMiss
 	void HitDeck();
-	void iterator();
+	void iterator(Deck& inDeck);
 
 	//int DeckReader();
 
 	//Puts the cards into a random order
 	void RandomNumberGen();
 
-
+	vector<Card>UsedHand;
 	vector<Card>HitHand;
 
 };

@@ -48,6 +48,7 @@ int Card::getValue() {
 	return value;
 }
 
+//black jack values
 int Card::getBlackjackValue() {
 	if (rank == "ACE") {
 		//if (Player::handtotal <= 10) {
