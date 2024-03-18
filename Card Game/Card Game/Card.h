@@ -22,5 +22,8 @@ public:
 	
 	int value;
 
+	int getValue();
+	int getBlackjackValue();
+
 };
 

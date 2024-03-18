@@ -102,8 +102,25 @@ void Deck::makeDeck() {
 void Deck::iterator() {
     //Uses the randomised deck and iterates throughout it.
     //Once the deck reaches the same card 
+
+    for (int L = 0; L < HitHand.size(); L++) {
+       
+
+    }
+
+
 }
+
+
 
 void Deck::HitDeck() {
     
 }
+
+//Needs to have the deck size value at all times so i can iterate through that value of it.
+//Need to make new card decks every time the cards in deck have been hit before i can make a new card deck. 
+//The hit deck then needs to be wiped 
+
+
+
+//HitHand.push_back(inDeck.Getdeck().back());

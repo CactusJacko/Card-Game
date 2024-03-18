@@ -22,6 +22,14 @@ BlackJack::BlackJack() {};
 
 
 
+
+
+
+
+
+
+
+
 void BlackJack::BlackJackRules() {
 
 	//Needs to explain the BlackJack rules

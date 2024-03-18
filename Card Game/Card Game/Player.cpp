@@ -36,7 +36,7 @@ void Player::AddCard(Deck & inDeck) {
     // counts the other cards in the vector but avoids the ACES
     for (Card c : playerHand) {
         if (c.rank != "ACE") {
-            handtotal += c.value;
+            handtotal += c.getBlackjackValue();
         }
     }
 
@@ -58,7 +58,7 @@ void Player::AddCard(Deck & inDeck) {
     handtotal = 0;
     // creates a loop and loop
     for (Card c : playerHand) {
-        handtotal += c.value;
+        handtotal += c.getBlackjackValue();
     }
 
     
@@ -91,6 +91,8 @@ void Player::DealerHit(Deck& inDeck) {
         
     }
 }
+
+
 /*
 void Player::PlayerHIT(Deck& inDeck) {
     AddCard(inDeck);

@@ -42,5 +42,8 @@ public:
 	//Puts the cards into a random order
 	void RandomNumberGen();
 
+
+	vector<Card>HitHand;
+
 };
 
