@@ -133,7 +133,12 @@ void Deck::iterator(Deck& inDeck) {
             verbalrank = 1;
         }
     }
-   
+   // Once cards deck size = 0 
+   // Shuffle non hit cards 
+   // for loop size of non hit cards gets put back into cards deck.
+   //Once hit cards = 52, youve won
+   //
+   // YOU NEED TO HIT 1 CARD A ROUND, to contuine.
 
 }
 
