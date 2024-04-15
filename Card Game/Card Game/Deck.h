@@ -42,6 +42,9 @@ public:
 	//Puts the cards into a random order
 	void RandomNumberGen();
 
+
+	// stores the hit deck of cards
+
 	vector<Card>UsedHand;
 	vector<Card>HitHand;
 

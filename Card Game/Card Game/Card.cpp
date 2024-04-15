@@ -11,37 +11,31 @@ Card::Card(string rank, string suit) {
 	this->suit = suit;
 	this->rank = rank;
 
-	/*
+	
 	if (rank == "ACE") {
-		//if (Player::handtotal <= 10) {
-			//value = 11;
-		//}
-
-		//else {
-		//	value = 1;
-		//}
-		value = 11;
+		
+		value = 1;
 	}
 
 	else if (rank == "KING") {
-		value = 10;
+		value = 11;
 	}
 
 	else if (rank == "QUEEN") {
-		value = 10;
+		value = 12;
 	}
 
 	else if (rank == "JACK") {
-		value = 10;
+		value = 13;
 	}
 
 	else {
 		//coverts string to interger.
 		value = stoi(rank);
 	}
-	*/
+	
 
-	value = stoi(rank);
+	//value = stoi(rank);
 }
 
 int Card::getValue() {
