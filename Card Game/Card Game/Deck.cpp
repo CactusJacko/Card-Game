@@ -14,7 +14,7 @@ using namespace std;
 
 
 
-Deck::Deck(int DeckShuffler) {
+Deck::Deck() {
 }
 
 
@@ -100,6 +100,32 @@ void Deck::makeDeck() {
 
 
 
+
+//NEEDS A way of getting Deck size
+int Deck::DeckSize() {
+   return cardsDeck.size();
+}
+
+
+
+
+
+//NEEDS a way of Adding cards to the deck
+void Deck::DeckAdd(Card NewCard) {
+    cardsDeck.push_back(NewCard);
+}
+
+
+Card Deck::GetCard(int index){
+
+    return cardsDeck[index];
+}
+
+
+
+
+
+
 //PUT IN HIT OR MISS
 
 
@@ -108,56 +134,6 @@ void Deck::makeDeck() {
 
 //2. NEEDS TO HAVE OWN THING TO GET RID OF CURRENT CARD
 
-
-//Exclusive to hit or miss 
-void Deck::iterator(Deck& inDeck) {
-    //Uses the randomised deck and iterates throughout it.
-    //Once the deck reaches the same card 
-/*
-    for (int L = 0; L < HitHand.size(); L++) {
-       if (card.getvalue()
-
-    }
-
-  */
-
-
-    // needs a bool loop for the game.
-
-    
-    
-    int CardDeckLoop = 0;
-
-
-    int verbalrank = 1;
-    bool Hit = false;
-    for (int L = 1; L < cardsDeck.size(); L++) {
-        int HowManyCardsHit = -1;
-        if (verbalrank == cardsDeck[L].getValue()) {
-            Hit = true;
-            cout << cardsDeck[L].rank << "OF" << cardsDeck[L].value << endl;
-            HitHand.push_back(inDeck.Getdeck().back());
-            inDeck.popdeck();
-            int HitCardCount = +1;
-
-            HowManyCardsHit = cardsDeck.size() - HitCardCount;
-
-
-        }
-        //verbal rank is reset.
-        verbalrank++;
-        if (verbalrank > 13) {
-            verbalrank = 1;
-
-            //If a card isnt hit in the 2 loops - game is lost.
-        }
-
-        //restarts the loop over again 
-        if (cardsDeck.size() == HowManyCardsHit) {
-            CardDeckLoop = +1;
-
-        }
-    }
 
 
 
@@ -168,16 +144,8 @@ void Deck::iterator(Deck& inDeck) {
    //
    // YOU NEED TO HIT 1 CARD A ROUND, to contuine.
 
-}
 
 
-
-
-void Deck::HitDeck() {
-    //ONCE DECK = 52 SIZE - GAME WON
-
-    
-}
 
 //Needs to have the deck size value at all times so i can iterate through that value of it.
 //Need to make new card decks every time the cards in deck have been hit before i can make a new card deck. 

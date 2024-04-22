@@ -23,7 +23,7 @@ public:
 	//Pops the last card in the cards deck
 	void popdeck();
 
-	Deck(int DeckShuffler);
+	Deck();
 
 	Card takeTopCard();
 
@@ -33,20 +33,18 @@ public:
 
 	void makeDeck();
 
-	//specifcally for HitOrMiss
-	void HitDeck();
-	void iterator(Deck& inDeck);
+
 
 	//int DeckReader();
 
 	//Puts the cards into a random order
 	void RandomNumberGen();
 
+	int DeckSize();
 
-	// stores the hit deck of cards
+	void DeckAdd(Card NewCard);
 
-	vector<Card>UsedHand;
-	vector<Card>HitHand;
+	Card GetCard(int index);
 
 };
 
