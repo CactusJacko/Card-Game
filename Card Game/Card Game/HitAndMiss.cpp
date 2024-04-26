@@ -58,6 +58,7 @@ void HitAndMiss::HitAndMissGame() {
 
 
         }
+
         //verbal rank is reset.
         verbalrank++;
         if (verbalrank > 13) {
@@ -88,6 +89,15 @@ void HitAndMiss::HitAndMissGame() {
             while (HitHand.DeckSize() < 52) {
 
                 //Main Game code
+                if (not Hit and CardDeckLoop == 2) {
+
+                    // Game lost
+
+                }
+
+                else {
+
+                }
             }
 
         }
@@ -95,7 +105,7 @@ void HitAndMiss::HitAndMissGame() {
     }
 
 
-
+    
 
 }
 
