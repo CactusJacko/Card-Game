@@ -22,7 +22,7 @@ void HitAndMiss::HitAndMissRules() {
 
 void HitAndMiss::HitAndMissGame() {
 
-
+    // Makes two card decks
     Deck cardsDeck = Deck();
     cardsDeck.makeDeck();
     Deck HitHand = Deck();
