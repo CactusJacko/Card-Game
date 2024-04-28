@@ -34,7 +34,7 @@ void BlackJack::BlackJackRules() {
 
 	//Needs to explain the BlackJack rules
 	//Gives player the option to play BlackJack Afterwards or go to main menu
-
+	cout << "blackjack rules" << endl;
 }
 
 void BlackJack::BlackJackGame() {

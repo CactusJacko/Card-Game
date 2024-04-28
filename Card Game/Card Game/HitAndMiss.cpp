@@ -39,39 +39,39 @@ void HitAndMiss::HitAndMissGame() {
 
 
     //Loops throught the entire card deck
-    for (int L = 1; L < cardsDeck.DeckSize(); L++) {
+  //  for (int L = 1; L < cardsDeck.DeckSize(); L++) {
 
        
 
-        cout << verbalrank << endl;
-        cout << cardsDeck.GetCard(L).rank << "OF" << cardsDeck.GetCard(L).value << endl;
+      //  cout << verbalrank << endl;
+      //  cout << cardsDeck.GetCard(L).rank << "OF" << cardsDeck.GetCard(L).value << endl;
 
-        if (verbalrank == cardsDeck.GetCard(L).getValue()) {
-            Hit = true;
-            cout << cardsDeck.GetCard(L).rank << "OF" << cardsDeck.GetCard(L).value << endl;
-            HitHand.DeckAdd(cardsDeck.Getdeck().back());
-            cardsDeck.popdeck();
-            int HitCardCount = +1;
+       // if (verbalrank == cardsDeck.GetCard(L).getValue()) {
+       //     Hit = true;
+       //     cout << cardsDeck.GetCard(L).rank << "OF" << cardsDeck.GetCard(L).value << endl;
+       //     HitHand.DeckAdd(cardsDeck.Getdeck().back());
+        //    cardsDeck.popdeck();
+        //    int HitCardCount = +1;
 
-            //Adds up to see how many cards have been hit 
-            HowManyCardsHit = cardsDeck.DeckSize() - HitCardCount;
+       //     //Adds up to see how many cards have been hit 
+       //     HowManyCardsHit = cardsDeck.DeckSize() - HitCardCount;
 
 
-        }
+      //  }
 
-        //verbal rank is reset.
-        verbalrank++;
-        if (verbalrank > 13) {
-            verbalrank = 1;
+      //  //verbal rank is reset.
+       // verbalrank++;
+       // if (verbalrank > 13) {
+       //     verbalrank = 1;
 
            
-        }
+       // }
 
         //restarts the loop over again 
-        if (cardsDeck.DeckSize() == L) {
-            CardDeckLoop = +1;
+       // if (cardsDeck.DeckSize() == L) {
+       //     CardDeckLoop = +1;
 
-        }
+      //  }
 
 
 
@@ -96,7 +96,44 @@ void HitAndMiss::HitAndMissGame() {
                 }
 
                 else {
+                    //Loops throught the entire card deck
+                    for (int L = 1; L < cardsDeck.DeckSize(); L++) {
 
+
+
+                        cout << verbalrank << endl;
+                        cout << cardsDeck.GetCard(L).rank << "OF" << cardsDeck.GetCard(L).value << endl;
+
+                        if (verbalrank == cardsDeck.GetCard(L).getValue()) {
+                            Hit = true;
+                            cout << cardsDeck.GetCard(L).rank << "OF" << cardsDeck.GetCard(L).value << endl;
+                            HitHand.DeckAdd(cardsDeck.Getdeck().back());
+                            cardsDeck.popdeck();
+                            int HitCardCount = +1;
+
+                            //Adds up to see how many cards have been hit 
+                            HowManyCardsHit = cardsDeck.DeckSize() - HitCardCount;
+
+
+                        }
+
+                        //verbal rank is reset.
+                        verbalrank++;
+                        if (verbalrank > 13) {
+                            verbalrank = 1;
+
+
+                        }
+
+                        //restarts the loop over again 
+                        if (cardsDeck.DeckSize() == L) {
+                            CardDeckLoop = +1;
+
+                        }
+
+
+
+                      
                 }
             }
 
@@ -107,7 +144,7 @@ void HitAndMiss::HitAndMissGame() {
 
     
 
-}
+//}
 
 
 

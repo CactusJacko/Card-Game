@@ -15,12 +15,13 @@ using namespace std;
 int main()
 {
 
-
+	HitAndMiss HitAndMissChoice = HitAndMiss();
 	BlackJack BlackJackChoice = BlackJack();
 
 	//whole menue
 	bool gamechosen = false;
 	while (gamechosen == false) {
+		cout << "MAIN MENU" << endl;
 		cout << "PLEASE TYPE IN CAPS" << endl;
 		cout << "which game do you want to play BLACKJACK OR HITANDMISS" << endl;
 		string choice;
@@ -32,7 +33,7 @@ int main()
 			string RulesBlackJack;
 			cin >> RulesBlackJack;
 			if (RulesBlackJack == "YES") {
-
+				BlackJackChoice.BlackJackRules();
 			}
 
 			else if (RulesBlackJack == "NO") {
@@ -51,12 +52,12 @@ int main()
 			string RulesHITANDMISS;
 			cin >> RulesHITANDMISS;
 			if (RulesHITANDMISS == "YES") {
-
+				HitAndMissChoice.HitAndMissRules();
 			}
 
 			else if (RulesHITANDMISS == "NO") {
 				gamechosen = true;
-				BlackJackChoice.BlackJackGame();
+				HitAndMissChoice.HitAndMissGame();
 			}
 
 			else {
