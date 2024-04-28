@@ -15,9 +15,60 @@ using namespace std;
 int main()
 {
 
+
 	BlackJack BlackJackChoice = BlackJack();
 
-	BlackJackChoice.BlackJackGame();
+	//whole menue
+	bool gamechosen = false;
+	while (gamechosen == false) {
+		cout << "PLEASE TYPE IN CAPS" << endl;
+		cout << "which game do you want to play BLACKJACK OR HITANDMISS" << endl;
+		string choice;
+		cin >> choice;
+
+		//BlackJack menu
+		if (choice == "BLACKJACK") {
+			cout << "Would you like to read the rules? YES or NO" << endl;
+			string RulesBlackJack;
+			cin >> RulesBlackJack;
+			if (RulesBlackJack == "YES") {
+
+			}
+
+			else if (RulesBlackJack == "NO") {
+				gamechosen = true;
+				BlackJackChoice.BlackJackGame();
+			}
+
+			else {
+				cout << "returned to menu" << endl;
+			}
+		}
+
+		//HITANDMISS menu
+		if (choice == "HITANDMISS") {
+			cout << "Would you like to read the rules? YES or NO" << endl;
+			string RulesHITANDMISS;
+			cin >> RulesHITANDMISS;
+			if (RulesHITANDMISS == "YES") {
+
+			}
+
+			else if (RulesHITANDMISS == "NO") {
+				gamechosen = true;
+				BlackJackChoice.BlackJackGame();
+			}
+
+			else {
+				cout << "returned to menu" << endl;
+			}
+		}
+
+
+
+	}
+
+
 
 
 	

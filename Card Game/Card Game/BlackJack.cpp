@@ -12,7 +12,7 @@ using namespace std;
 
 Player player2 = Player("Steve", 5, true);
 Player player1 = Player("Steve", 5, true);
-Deck GameDeck = Deck(0);
+Deck GameDeck = Deck();
 Card Cards = Card("ACE", "HEARTS");
 
 
