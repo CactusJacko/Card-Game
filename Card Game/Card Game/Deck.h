@@ -46,5 +46,9 @@ public:
 
 	Card GetCard(int index);
 
+	void RemoveCard(int index);
+
+	void RemoveCard();
+
 };
 

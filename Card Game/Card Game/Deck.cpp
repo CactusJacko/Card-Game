@@ -41,6 +41,7 @@ vector<Card> Deck::Getdeck(){
 // Contains all 52 cards, stores them in a vector
 void Deck::makeDeck() {
     for (int i = 1; i <= 13; i++) {
+        
         if (i == 1) {
             Card HEARTS("ACE", "HEARTS");
             Card DIAMONDS("ACE", "DIAMONDS");
@@ -106,8 +107,10 @@ int Deck::DeckSize() {
    return cardsDeck.size();
 }
 
-
-
+// removes that card
+void Deck::RemoveCard(int index) {
+    cardsDeck.erase(cardsDeck.begin() + index);
+}
 
 
 //NEEDS a way of Adding cards to the deck
@@ -121,6 +124,9 @@ Card Deck::GetCard(int index){
     return cardsDeck[index];
 }
 
+void Deck::RemoveCard() {
+    cardsDeck.erase(cardsDeck.end() - 1);
+}
 
 
 

@@ -25,6 +25,7 @@ void HitAndMiss::HitAndMissGame() {
     // Makes two card decks
     Deck cardsDeck = Deck();
     cardsDeck.makeDeck();
+    cardsDeck.RandomNumberGen();
     Deck HitHand = Deck();
 
 
@@ -97,18 +98,21 @@ void HitAndMiss::HitAndMissGame() {
 
                 else {
                     //Loops throught the entire card deck
-                    for (int L = 1; L < cardsDeck.DeckSize(); L++) {
+                    for (int L = 0; L < cardsDeck.DeckSize(); L++) {
 
 
-
+                        //USER WONT SEE THIS WHEN THE GAME IS FINISHED
                         cout << verbalrank << endl;
-                        cout << cardsDeck.GetCard(L).rank << "OF" << cardsDeck.GetCard(L).value << endl;
+
+
+
+                        cout << cardsDeck.GetCard(L).rank << " OF " << cardsDeck.GetCard(L).suit << endl;
 
                         if (verbalrank == cardsDeck.GetCard(L).getValue()) {
                             Hit = true;
-                            cout << cardsDeck.GetCard(L).rank << "OF" << cardsDeck.GetCard(L).value << endl;
-                            HitHand.DeckAdd(cardsDeck.Getdeck().back());
-                            cardsDeck.popdeck();
+                            cout << "HIT " << cardsDeck.GetCard(L).rank << " OF " << cardsDeck.GetCard(L).value << endl;
+                            HitHand.DeckAdd(cardsDeck.GetCard(L));
+                            cardsDeck.RemoveCard(L);
                             int HitCardCount = +1;
 
                             //Adds up to see how many cards have been hit 
@@ -129,10 +133,12 @@ void HitAndMiss::HitAndMissGame() {
                         if (cardsDeck.DeckSize() == L) {
                             CardDeckLoop = +1;
 
+                            //NEEDS TO SHUFFLE THE CARDS
+
                         }
 
 
-
+                    }
                       
                 }
             }
