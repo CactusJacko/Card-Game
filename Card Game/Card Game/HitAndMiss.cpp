@@ -46,48 +46,7 @@ void HitAndMiss::HitAndMissGame() {
     int verbalrank = 1;
     bool Hit = false;
     int HowManyCardsHit = -1;
-    int life = 3
-
-
-
-
-
-    //Loops throught the entire card deck
-  //  for (int L = 1; L < cardsDeck.DeckSize(); L++) {
-
-       
-
-      //  cout << verbalrank << endl;
-      //  cout << cardsDeck.GetCard(L).rank << "OF" << cardsDeck.GetCard(L).value << endl;
-
-       // if (verbalrank == cardsDeck.GetCard(L).getValue()) {
-       //     Hit = true;
-       //     cout << cardsDeck.GetCard(L).rank << "OF" << cardsDeck.GetCard(L).value << endl;
-       //     HitHand.DeckAdd(cardsDeck.Getdeck().back());
-        //    cardsDeck.popdeck();
-        //    int HitCardCount = +1;
-
-       //     //Adds up to see how many cards have been hit 
-       //     HowManyCardsHit = cardsDeck.DeckSize() - HitCardCount;
-
-
-      //  }
-
-      //  //verbal rank is reset.
-       // verbalrank++;
-       // if (verbalrank > 13) {
-       //     verbalrank = 1;
-
-           
-       // }
-
-        //restarts the loop over again 
-       // if (cardsDeck.DeckSize() == L) {
-       //     CardDeckLoop = +1;
-
-      //  }
-
-
+    int life = 3;
 
         //If a card isnt hit in the 2 loops - game is lost.
         /// Plays at begining of game
@@ -140,6 +99,7 @@ void HitAndMiss::HitAndMissGame() {
                             }
                             else {
                                 //lose life
+                                cout << "That should of been a missed card" << endl;
                                 cout << "you lose a life" << endl;
                             }
                         }
@@ -149,6 +109,7 @@ void HitAndMiss::HitAndMissGame() {
                             if (verbalrank == cardsDeck.GetCard(L).getValue()) {
                                 //lose life
                                 cout << "That should of been a hit card" << endl;
+                                cout << "you lose a life" << endl;
                                 
 
                               
