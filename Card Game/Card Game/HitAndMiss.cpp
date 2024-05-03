@@ -29,7 +29,7 @@ void HitAndMiss::HitAndMissRules() {
 
 
 )";
-
+    cout << hitandmissrules << endl;
 }
 
 void HitAndMiss::HitAndMissGame() {
@@ -46,38 +46,65 @@ void HitAndMiss::HitAndMissGame() {
     int verbalrank = 1;
     bool Hit = false;
     int HowManyCardsHit = -1;
-    int life = 3;
+    int Life = 3;
+    int LifeRemover = 1;
+    int TotalLifes =1;
+    bool WholeGame = true;
 
-        //If a card isnt hit in the 2 loops - game is lost.
-        /// Plays at begining of game
-        if ( not Hit and CardDeckLoop == 2) {
 
-            // Game lost
+    while (WholeGame == true) {
 
-        }
 
-        else {
+  
 
-            //think of ways to make this work
-            while (HitHand.DeckSize() < 52) {
+
+            //Runs until all cards are in the hit deck
+            while (HitHand.DeckSize() < 52 and WholeGame == true) {
+
+                
+
 
                 //Main Game code
-                if (not Hit and CardDeckLoop == 2) {
-
-                    // Game lost
-
-                }
-
-                else {
-                    //Loops throught the entire card deck
-                    for (int L = 0; L < cardsDeck.DeckSize(); L++) {
+                //Loops entire card deck
+                for (int L = 0; L < cardsDeck.DeckSize(); L++) {
 
 
-                        //USER WONT SEE THIS WHEN THE GAME IS FINISHED
-                        cout << verbalrank << endl;
+                    //USER WONT SEE THIS WHEN THE GAME IS FINISHED
+                    //cout << verbalrank << endl;
 
+                    if (not Hit and CardDeckLoop == 2) {
+
+                        // Game lost
+                        cout << "   " << endl;
+                        cout << "GAME OVER" << endl;
+                        WholeGame = false;
+                        L = cardsDeck.DeckSize();
+     
+                    }
+
+                    if (Life == 0) {
+                        //game lost
+                        cout << "   " << endl;
+                        cout << "GAME OVER" << endl;
+                        WholeGame = false;
+                        L = cardsDeck.DeckSize();
+                    }
+
+                    if (cardsDeck.DeckSize() == 52) {
+                        cout << "   " << endl;
+                        cout << "YOU WIN" << endl;
+                        WholeGame = false;
+                        L = cardsDeck.DeckSize();
+                    }
+
+
+                    else {
 
                         //shows the user the card and ask them if they want to hit
+                        cout << "   " << endl;
+                        cout << "card number is " << L << endl;
+                        cout << "   " << endl;
+                        cout << verbalrank << endl;
                         cout << cardsDeck.GetCard(L).rank << " OF " << cardsDeck.GetCard(L).suit << endl;
                         cout << "Would you like to hit? Y or N " << endl;
                         string ChoiceHit;
@@ -90,6 +117,9 @@ void HitAndMiss::HitAndMissGame() {
                                 cout << "HIT " << cardsDeck.GetCard(L).rank << " OF " << cardsDeck.GetCard(L).suit << endl;
                                 HitHand.DeckAdd(cardsDeck.GetCard(L));
                                 cardsDeck.RemoveCard(L);
+
+
+                                // cant rember if this code is needed below
                                 int HitCardCount = +1;
 
                                 //Adds up to see how many cards have been hit 
@@ -99,8 +129,12 @@ void HitAndMiss::HitAndMissGame() {
                             }
                             else {
                                 //lose life
-                                cout << "That should of been a missed card" << endl;
+                                cout << "MISS" << endl;
                                 cout << "you lose a life" << endl;
+                                cout << Life << endl;
+                                Life -= 1;
+                                cout << "You have " << Life << " lifes remaining" << endl;
+                                
                             }
                         }
 
@@ -110,11 +144,10 @@ void HitAndMiss::HitAndMissGame() {
                                 //lose life
                                 cout << "That should of been a hit card" << endl;
                                 cout << "you lose a life" << endl;
-                                
-
-                              
-
-
+                                cout << Life << endl;
+                                Life -=1 ;
+                                cout << "You have " << Life << " lifes remaining" << endl;
+                               
                             }
 
                             else {
@@ -122,22 +155,6 @@ void HitAndMiss::HitAndMissGame() {
                             }
                         }
 
-
-
-                        /*
-                        if (verbalrank == cardsDeck.GetCard(L).getValue()) {
-                            Hit = true;
-                            cout << "HIT " << cardsDeck.GetCard(L).rank << " OF " << cardsDeck.GetCard(L).suit << endl;
-                            HitHand.DeckAdd(cardsDeck.GetCard(L));
-                            cardsDeck.RemoveCard(L);
-                            int HitCardCount = +1;
-
-                            //Adds up to see how many cards have been hit 
-                            HowManyCardsHit = cardsDeck.DeckSize() - HitCardCount;
-
-
-                        }
-                        */
 
                         //verbal rank is reset.
                         verbalrank++;
@@ -156,14 +173,23 @@ void HitAndMiss::HitAndMissGame() {
                         }
 
 
+
+
                     }
-                      
+
+
+
+
+
+
+
+
+
                 }
             }
 
-        }
-
     }
+}
 
 
     
