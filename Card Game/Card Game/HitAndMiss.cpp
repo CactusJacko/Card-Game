@@ -17,7 +17,10 @@ void HitAndMiss::HitAndMissRules() {
 
 	//Needs to explain the Hit and miss rules
 	//Gives player the option to play Hit and miss Afterwards or go to main menu
-    string hitandmissrules = R"(
+    string HitAndMissRules = R"(
+        HIT OR MISS RULES
+
+
 1. YOU GET 3 LIFES AT THIS GAME
 2. YOU MUST HIT ALL 52 CARDS TO WIN
 3. VERBAL COUNT STARTS AT 1 THEN RESETS AFTER 13
@@ -29,7 +32,7 @@ void HitAndMiss::HitAndMissRules() {
 
 
 )";
-    cout << hitandmissrules << endl;
+    cout << HitAndMissRules << endl;
 }
 
 void HitAndMiss::HitAndMissGame() {

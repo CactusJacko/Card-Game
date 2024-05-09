@@ -21,22 +21,32 @@ int main()
 	//whole menue
 	bool gamechosen = false;
 	while (gamechosen == false) {
-		cout << "MAIN MENU" << endl;
-		cout << "PLEASE TYPE IN CAPS" << endl;
-		cout << "which game do you want to play BLACKJACK OR HITANDMISS" << endl;
+		string MainMenuScreen = R"(
+		MAIN MENU
+
+PLEASE CHOOSE A GAME:
+SELECT EITHER 1 OR 2
+
+1 - BLACKJACK
+
+2 - HIT OR MISS
+
+)";
+		cout << MainMenuScreen << endl;
 		string choice;
 		cin >> choice;
 
 		//BlackJack menu
-		if (choice == "BLACKJACK") {
-			cout << "Would you like to read the rules? YES or NO" << endl;
+		if (choice == "1") {
+			cout << "GAME SELECTED BLACKJACK" << endl;
+			cout << "Would you like to read the rules? Y or N" << endl;
 			string RulesBlackJack;
 			cin >> RulesBlackJack;
-			if (RulesBlackJack == "YES") {
+			if (RulesBlackJack == "Y") {
 				BlackJackChoice.BlackJackRules();
 			}
 
-			else if (RulesBlackJack == "NO") {
+			else if (RulesBlackJack == "N") {
 				gamechosen = true;
 				BlackJackChoice.BlackJackGame();
 			}
@@ -47,15 +57,16 @@ int main()
 		}
 
 		//HITANDMISS menu
-		if (choice == "HITANDMISS") {
-			cout << "Would you like to read the rules? YES or NO" << endl;
+		if (choice == "2") {
+			cout << "GAME SELECTED HIT OR MISS" << endl;
+			cout << "Would you like to read the rules? Y or N" << endl;
 			string RulesHITANDMISS;
 			cin >> RulesHITANDMISS;
-			if (RulesHITANDMISS == "YES") {
+			if (RulesHITANDMISS == "Y") {
 				HitAndMissChoice.HitAndMissRules();
 			}
 
-			else if (RulesHITANDMISS == "NO") {
+			else if (RulesHITANDMISS == "N") {
 				gamechosen = true;
 				HitAndMissChoice.HitAndMissGame();
 			}

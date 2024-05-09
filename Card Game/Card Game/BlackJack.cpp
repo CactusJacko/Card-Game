@@ -21,20 +21,24 @@ BlackJack::BlackJack() {};
 
 
 
-
-
-
-
-
-
-
-
-
 void BlackJack::BlackJackRules() {
 
 	//Needs to explain the BlackJack rules
 	//Gives player the option to play BlackJack Afterwards or go to main menu
-	cout << "blackjack rules" << endl;
+	
+
+	string BlackJackRules = R"(
+        BLACKJACK RULES
+
+1. PLAYER TAKES 2 CARDS
+2. DEALER TAKES 2 CARDS
+3. THE PLAYER/DEALER CAN TAKE ANOTHER CARD
+4. IF ITS OVER 21 THEY GO BUST AND THE GAME IS OVER
+5. AIM OF THE GAME IS TO BE HIGHER THAN THE DEALER
+
+
+)";
+	cout << BlackJackRules << endl;
 }
 
 void BlackJack::BlackJackGame() {
