@@ -17,7 +17,7 @@ Card::Card(string rank, string suit) {
 		value = 1;
 	}
 
-	else if (rank == "KING") {
+	else if (rank == "JACK") {
 		value = 11;
 	}
 
@@ -25,7 +25,7 @@ Card::Card(string rank, string suit) {
 		value = 12;
 	}
 
-	else if (rank == "JACK") {
+	else if (rank == "KING") {
 		value = 13;
 	}
 
